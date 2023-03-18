@@ -1,0 +1,74 @@
+<%- include('../partials/header.ejs')%>    
+<div class="form">
+    <form method = "POST" action="/events/<%= event.id%>?_method=PUT">
+        <div class="row">
+            <div class="form-label">
+                <strong><label for="category">Category</label></strong>
+            </div>
+            <div class="form-input">
+                <select id="category" name="category">
+                    <option value="" disabled hidden selected><%= event.category%></option>
+                    <option value="Painting">Painting</option>
+                    <option value="Drawing">Drawing</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Jewelry-Making">Jewelry-Making</option>
+                    <option value="Paper Crafts">Paper Crafts</option>
+                    <option value="Other">Other</option>
+                </select><br><br>
+            </div>
+            <!-- Title -->
+            <div class="form-label">
+                <strong><label for="title">Title</label></strong>
+            </div>
+            <div class="form-input">
+                <input type="text" id="title" name="title" value="<%=event.title%>" required><br><br>
+            </div>
+            <!-- Host Name -->
+            <div class="form-label">
+                <strong><label for="hostname">Host Name</label></strong>
+            </div>
+            <div class="form-input">
+                <input type="text" id="hostname" name="hostname" value="<%=event.hostname%>" required><br><br>
+            </div>
+            <!-- Location -->
+            <div class="form-label">
+                <strong><label for="location">Where</label></strong>
+            </div>
+            <div class="form-input">
+                <input type="text" id="location" name="location" value="<%=event.location%>" required><br><br>
+            </div>
+            <!-- Start Date -->
+            <div class="form-label">
+                <strong><label for="startDate">Start</label></strong>
+            </div>
+            <div class="form-input">
+                <input type="datetime-local" id="startDate" name="startDate" value="<%=event.startDate%>" min="2023-01-01T00:00" max="2023-12-31T00:00" required><br><br>
+            </div>
+            <!-- End Date -->
+            <div class="form-label">
+                <strong><label for="endDate">End</label></strong>
+            </div>
+            <div class="form-input">
+                <input type="datetime-local" id="endDate" name="endDate" value="<%=event.endDate%>" min="2023-01-01T00:00" max="2023-12-31T00:00" required><br><br>
+            </div>
+            <!-- Details -->
+            <div class="form-label">
+                <strong><label for="details">Details</label></strong>
+            </div>
+            <div class="form-input">
+                <textarea id="details" name="details" required><%=event.details%></textarea><br><br>
+            </div>
+            <!-- Image -->
+            <div class="form-label">
+                <strong><label for="selectImage">Image</label></strong>
+            </div>
+            <div class="form-input">
+                <input type="file" id="selectImage" name="selectImage" accept="images/*" required><br><br>
+            </div>
+            <img src="<%= typeof image !== 'undefined'? image: ''%>" style="width:100%">
+            <!-- Submit button -->
+            <input type="submit" value="SUBMIT" class="submit">
+        </div>
+    </form>
+</div>
+<%- include('../partials/footer.ejs')%>

@@ -1,0 +1,175 @@
+html {
+    font-family: 'Work Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Unbounded', cursive;
+}
+
+body {
+    margin: 0;
+}
+
+main {
+    margin: 70px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+header {
+    height: 120px;
+    padding: 25px;
+    text-align: center;
+    background-color: #616F9B;
+} */
+
+/** Styling for navigation bars **/
+    #nav-bar {
+        position: relative;
+        background-color: #616F9B;
+        overflow: hidden;
+    }
+
+    #user-nav {
+        overflow: hidden;
+    }
+
+    #user-nav a.logo {
+        float: left;
+        display: inherit;
+        justify-content: center;
+    }
+
+    #user-nav a {
+        color: white;
+        padding: 10px;
+        float: right;
+        display: block;
+    }
+
+    #general-nav a {
+        display: block;
+        color: white;
+        background-color: #616F9B;
+        float: left;
+    }
+
+    /** Styling for when nav links are hovered **/
+    #user-nav a:hover, #general-nav a:hover {
+        text-decoration:underline;
+    } 
+
+/** Styling the footer **/
+    footer {
+        height:30px;
+        padding: 10px;
+        background-color: #616F9B;
+        position:fixed;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .footer-link, .copyright {
+        color: white;
+        padding: 9px;
+        display: inline;
+    }
+
+    .footer-link:hover {
+        text-decoration: underline;
+    }
+    /** Styling the footer icons **/
+    #left {
+        text-align: left;
+    }
+
+    .fa-brands {
+        color: white;
+        margin-right: 25px;
+        float: right;
+        display: inline;
+    } */
+
+/** Styling index.html elements **/
+    #home-description, #contact-description, #about-description {
+        width: 100%;
+        display: inline-block;
+    }
+
+    #home-welcome, #contact-welcome, #about-welcome {
+        width: 100%;
+        margin: auto;
+    } */
+
+/** Styling the events.html page **/
+    #events {
+        width: 100%;
+        margin: auto;
+    }
+
+    #events a:hover {
+        text-decoration: underline;
+    } */
+
+/** Styling the event.html page **/
+    #event-content {
+        display: inline-block;
+    }
+
+    .event-img {
+        width: 100%;
+        max-width: 400px;
+        height:auto;
+    }
+
+    #event-header {
+        overflow: hidden;
+        display: flex;
+    }
+
+    #event-details {
+        display: inline-block;
+        width: 60%;
+        padding: 20px;
+    }
+
+    #icons {
+        color: #616F9B;
+        padding: 20px;
+    }
+
+/** Styling newEvent.html (form elements) **/
+    input, select, textarea {
+        box-sizing: border-box;
+        resize: vertical;
+        font-family: 'Work Sans', sans-serif;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .div-form {
+        padding: 15px;
+        border-radius: 7px;
+    }
+
+    .form-label {
+        float: left;
+        width: 10%;
+    }
+
+    .form-input {
+        float: left;
+        width: 90%;
+    } 
+
+    /** Making the form responsive when the screen is smaller **/
+    @media screen and (max-width: 600px) {
+        .form-label, .form-input, input[type=submit], #icons {
+        width: 100%;
+        margin-top: 5px;
+        }
+    }

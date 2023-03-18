@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs')%>    
+    <section id="events" class="events">
+        <ul>
+            <%if(events.length) {%>
+                    <%for(i = 0; i < uniqueCategories.length; i++){%>
+                        <%if(uniqueCategories){%>
+                            <h3><%= uniqueCategories[i]%></h3>
+                            <%events.forEach(event => {%>
+                                <%if(uniqueCategories[i] === event.category){%>
+                                <a href="/events/<%=event.id%>"><p><%= event.title%></p></a>
+                                <%}  
+                            });
+                        }
+                    }
+            } else {%>
+                <p>There are no events to display.</p>
+            <%}%>                        
+        </ul>
+    </section>
+<%- include('../partials/footer.ejs')%>
